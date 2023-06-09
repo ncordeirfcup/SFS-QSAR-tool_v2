@@ -322,15 +322,15 @@ def trainsetfit4(X,y,ms):
     
 def writefile1():
     if NC2.get()=='no':
-       Xtr=file1_c1.iloc[:,2:]
-       ytr=file1_c1.iloc[:,1:2]
-       ntr=file1_c1.iloc[:,0:1]
+       Xtr=file1_cl.iloc[:,2:]
+       ytr=file1_cl.iloc[:,1:2]
+       ntr=file1_cl.iloc[:,0:1]
     elif NC2.get()=='yes':
        file_pt=ptr()
        Xpt=file_pt.iloc[:,1:]
-       Xtr=file1_c1[Xpt.columns]
-       ytr=file1_c1.iloc[:,1:2]
-       ntr=file1_c1.iloc[:,0:1]   
+       Xtr=file1_cl[Xpt.columns]
+       ytr=file1_cl.iloc[:,1:2]
+       ntr=file1_cl.iloc[:,0:1]   
     lt,ls=[0],[]
     dct=str(OFNEntry_t3.get())
     if not os.path.isdir(dct):
