@@ -221,7 +221,8 @@ def execute():
     tk_process_lbl.pack()
     tk_process_lbl.place(x=500,y=340)
 
-    tk_var_end = tk.BooleanVar(False)
+    tk_var_end = tk.BooleanVar()
+    tk_var_end.set(False)
     wait_end(tk_process_lbl, tk_var_end)
     process = threading.Thread(
         target=writefilex,
