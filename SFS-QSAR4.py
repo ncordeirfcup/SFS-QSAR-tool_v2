@@ -441,8 +441,8 @@ def writefile1():
        pyplot.legend(fontsize=18)
        pyplot.tick_params(labelsize=18)
        name4='ROCplot.png'
-       pyplot.savefig(os.path.join(dct,name4), dpi=300, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, \
-                      format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None,metadata=None)
+       pyplot.savefig(os.path.join(dct,name4), dpi=300, facecolor='w', edgecolor='w',orientation='portrait', \
+                      format=None,transparent=False, bbox_inches=None, pad_inches=0.1,metadata=None)
     else:
        nts=file2_cl.iloc[:,0:1]
        Xts=file2_cl.iloc[:,1:]
@@ -464,8 +464,8 @@ def writefile1():
        pyplot.legend(fontsize=18)
        pyplot.tick_params(labelsize=18)
        dct='ROCplot.png'
-       pyplot.savefig(os.path.join(dct,name4), dpi=300, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, \
-                      format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None,metadata=None)
+       pyplot.savefig(os.path.join(dct,name4), dpi=300, facecolor='w', edgecolor='w',orientation='portrait',  \
+                      format=None,transparent=False, bbox_inches=None, pad_inches=0.1,metadata=None)
     if var4.get():
         ls=[]
         nr=int(N1B1_t3.get())
@@ -563,10 +563,10 @@ def writefilex(callback):
        pyplot.tick_params(labelsize=18)
        #rocn='obs_vspred.png'
        name3="obs_vspred.png"
-       plt1.savefig(os.path.join(dct,name3),dpi=300, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, \
-                      format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None,metadata=None)
+       plt1.savefig(os.path.join(dct,name3),dpi=300, facecolor='w', edgecolor='w',orientation='portrait', \
+                      format=None,transparent=False, bbox_inches=None, pad_inches=0.1,metadata=None)
        #plt1.savefig(rocn, dpi=300, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, \
-                      #format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None,metadata=None)
+                      #format=None,transparent=False, bbox_inches=None, pad_inches=0.1,metadata=None)
        plt2=pyplot.figure(figsize=(15,10))
        pyplot.scatter(ytr,l, label='Train(LOO)', color='blue')
        pyplot.plot([ytr.min(), ytr.max()], [ytr.min(), ytr.max()], 'k--', lw=4)
@@ -576,8 +576,8 @@ def writefilex(callback):
        pyplot.legend(fontsize=18)
        pyplot.tick_params(labelsize=18)
        name4="obsloo_vspred.png"
-       plt2.savefig(os.path.join(dct,name4),dpi=300, facecolor='w', edgecolor='w',orientation='portrait', papertype=None, \
-                      format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None,metadata=None)
+       plt2.savefig(os.path.join(dct,name4),dpi=300, facecolor='w', edgecolor='w',orientation='portrait',  \
+                      format=None,transparent=False, bbox_inches=None, pad_inches=0.1,metadata=None)
     else:
         Xts=file2.iloc[:,1:]
         nts=file2.iloc[:,0:1]
